@@ -1,0 +1,16 @@
+Name:                cabal-test-hunit
+Version:             0.2
+Synopsis:            A test runner integrating HUnit tests into the new Cabal testing framework.
+License:             BSD3
+License-file:        LICENSE
+Author:              Patrick Brisbin
+Maintainer:          Patrick Brisbin <pbrisbin@gmail.com>
+Category:            Testing
+Build-type:          Simple
+Cabal-version:       >= 1.2
+
+Library
+  Exposed-modules:     Distribution.TestSuite.HUnit
+  Build-depends:       HUnit == 1.2.*,
+                       Cabal >= 1.16, Cabal < 1.17,
+                       base == 4.*

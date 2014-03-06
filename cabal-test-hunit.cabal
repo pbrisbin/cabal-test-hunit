@@ -12,5 +12,5 @@ Cabal-version:       >= 1.2
 Library
   Exposed-modules:     Distribution.TestSuite.HUnit
   Build-depends:       HUnit == 1.2.*,
-                       Cabal >= 1.16, Cabal < 1.17,
+                       Cabal >= 1.16 && < 1.19,
                        base == 4.*

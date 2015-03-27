@@ -8,8 +8,6 @@ Interface for running HUnit tests via Cabal 1.16.
 git clone ... && cd ... && cabal install
 ~~~
 
-Requires HUnit 1.2.* and Cabal >= 1.16
-
 ## Usage
 
 Add a suite to your cabal file:

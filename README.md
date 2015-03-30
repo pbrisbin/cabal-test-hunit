@@ -8,8 +8,6 @@ Interface for running HUnit tests via Cabal 1.16.
 git clone ... && cd ... && cabal install
 ~~~
 
-Requires HUnit 1.2.* and Cabal 1.16.*
-
 ## Usage
 
 Add a suite to your cabal file:
@@ -27,7 +25,7 @@ Test-Suite test-your-thing
 Write some tests in `Test.YourTestModule`:
 
 ~~~ { .haskell }
-import HUnit
+import Test.HUnit
 
 import qualified Distribution.TestSuite as C
 import qualified Distribution.TestSuite.HUnit as H
@@ -39,7 +37,7 @@ testCases :: [(String, Test)]
 testCases = [("Truth tests", truthTest)]
 
 truthTest :: Test
-truthTest = assertEqual True True
+truthTest = TestCase $ assertEqual "True is true" True True
 ~~~
 
 Run them:

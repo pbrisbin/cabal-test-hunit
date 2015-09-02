@@ -59,8 +59,8 @@ runTest = fmap snd . H.performTest onStart onError onFailure (Finished Pass)
         onStart :: H.State -> Progress -> IO Progress
         onStart _ = return
 
-        onError :: String -> H.State -> Progress -> IO Progress
-        onError msg _ _ = return $ Finished (Error msg)
+        onError :: Maybe H.Location -> String -> H.State -> Progress -> IO Progress
+        onError _ msg _ _ = return $ Finished (Error $ concat $ map (++ " ") (lines msg))
 
-        onFailure :: String -> H.State -> Progress -> IO Progress
-        onFailure msg _ _ = return $ Finished (Fail msg)
+        onFailure :: Maybe H.Location -> String -> H.State -> Progress -> IO Progress
+        onFailure _ msg _ _ = return $ Finished (Fail $ concat $ map (++ " ") (lines msg))

@@ -5,7 +5,7 @@ Interface for running HUnit tests via Cabal 1.16.
 **DEPRECATED**: I no longer use this, and very much prefer HSpec. Therefore:
 
 - You will see no active development here, though I'm happy to merge PRs
-- I will not be publishing this to Hackage, though I'd be with someone else doing so
+- I will not be publishing this to Hackage, though I'd be fine with someone else doing so
 
 ## Installation
 
